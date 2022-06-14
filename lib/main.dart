@@ -24,12 +24,11 @@ class MyHomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Personal expenses'),
+        actions: <Widget>[
+          IconButton(onPressed: () {}, icon: Icon(Icons.add),)
+        ],
       ),
-      body: SingleChildScrollView(
-        child: Container(
-          height: 300,
-          child: SingleChildScrollView(
-            child: Column(
+      body: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
@@ -43,9 +42,8 @@ class MyHomePage extends StatelessWidget {
                 UserTransactions()
               ],
             ),
-          ),
-        ),
-      ),
-    );
+      floatingActionButton: FloatingActionButton(child: Icon(Icons.add),
+      onPressed: () {},),
+        );
   }
 }
